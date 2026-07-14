@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-obsidian-900 text-cream-200 font-sans antialiased;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-gold-400 text-obsidian-900 font-sans font-medium tracking-widest uppercase text-xs px-8 py-4 transition-all duration-300 hover:bg-gold-300 disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  .btn-outline-gold {
+    @apply border border-gold-400 text-gold-400 font-sans font-medium tracking-widest uppercase text-xs px-8 py-4 transition-all duration-300 hover:bg-gold-400 hover:text-obsidian-900;
+  }
+
+  .btn-outline-cream {
+    @apply border border-cream-200 text-cream-200 font-sans font-medium tracking-widest uppercase text-xs px-8 py-4 transition-all duration-300 hover:bg-cream-200 hover:text-obsidian-900;
+  }
+
+  .section-title {
+    @apply font-serif text-4xl md:text-5xl text-cream-100 mb-6;
+  }
+
+  .gold-divider {
+    @apply w-16 h-px bg-gold-400 mb-8;
+  }
+
+  .nav-link {
+    @apply text-xs tracking-widest uppercase font-sans text-cream-300 hover:text-gold-400 transition-colors duration-200;
+  }
+
+  .input-field {
+    @apply w-full bg-transparent border border-obsidian-600 text-cream-200 px-4 py-3 text-sm font-sans placeholder-obsidian-400 focus:outline-none focus:border-gold-400 transition-colors duration-200;
+  }
+
+  .card-product {
+    @apply bg-obsidian-800 overflow-hidden cursor-pointer transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  .badge-status {
+    @apply inline-flex items-center px-2.5 py-0.5 text-xs font-medium tracking-wide uppercase;
+  }
+}
+
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #D4AF37, #B8972E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
